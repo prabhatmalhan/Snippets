@@ -214,4 +214,13 @@
 		],
 		"description": "file defination"
 	  }
+
+	  "malloc": {
+  	        "prefix": "mal",
+  		"body": [
+   		"${1:int} *${2:p};",
+    		"$2 = ($1*)malloc(${3:n}*sizeof($1));"
+  	     ],
+  	     "description": "malloc"
+          }
 }
