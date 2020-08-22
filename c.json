@@ -52,6 +52,14 @@
 		"description": "input array"
 	  }
 
+	  "Printf precise": {
+		  "prefix": "pr",
+		  "body": [
+			  "printf(\"${1}\"$2);"
+		  ],
+		  "description": "print statement"
+	  }
+
 	  "print array": {
 		"prefix": "prarr",
 		"body": [
@@ -139,8 +147,20 @@
 		"description": "while loop"
 	  }
 
+	  "do - while loop": {
+		"prefix": "dowl",
+		"body": [
+		  "do",
+		  "{",
+		  "    $1",
+		  "    --$2;",
+		  "}while(${2:n});"
+		],
+		"description": "do - while loop"
+	  }
+
 	  "switch case": {
-		"prefix": "swc",
+		"prefix": "sw",
 		"body": [
 		  "switch($1)",
 		  "{",
@@ -156,8 +176,8 @@
 	  "input": {
 		"prefix": "in",
 		"body": [
-		  "int ${1:n};",
-		  "scanf(\"%${2:d}\",&$1);"
+		  "${1:int} ${2:n};",
+		  "scanf(\"%${3:d}\",&$2);"
 		],
 		"description": "input"
 	  }
@@ -168,7 +188,8 @@
 		  "${1:void} ${2:fun}($3)",
 		  "{",
 		  "    $4",
-		  "    ${5:return ${6}};"
+		  "    ${5:return ${6}};",
+		  "}"
 		],
 		"description": "function defination"
 	  }
