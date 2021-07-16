@@ -282,6 +282,10 @@
 			"{",
 			"    $2",
 			"}$3;"
+		  "struct $1",
+		  "{",
+		  "    $2",
+		  "}$3;"
 		],
 		"description": "structure defintation"
 	}
@@ -323,4 +327,6 @@
 		],
 		"description": "Class Defination"
 	}
+}
+		}
 }
