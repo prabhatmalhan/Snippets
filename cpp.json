@@ -3,28 +3,28 @@
 		"prefix": "cppro",
 		"body": [
 			"#include<bits/stdc++.h>",
-			"$1"
-			"#define ll long long"
-			"#define vi vector <int>"
-		    "using namespace std;",
-			"",
+			"$1",
+			"#define ll long long",
+			"#define vi vector <int>",
+		  "using namespace std;",
+     	"\n",
 			"int main($2)",
 			"{",
-			"    $3",
-			"    return 0;",
-			"}"
+			"\t$3",
+			"\treturn 0;",
+			"}",
 		],
 		"description": "basic c++ program"
-	}
+	},
 	"Printing a map": {
 		"prefix": "prma",
 		"body": [
 			"for(auto x: m)",
-    		"    cout<<x.first<<$1<<x.second<<endl;"
+    		"\tcout<<x.first<<$1<<x.second<<endl;"
 		],
 		"description": "printing a map"
-	}
-	  "competetive cpp program": {
+},
+  	"competetive cpp program": {
 		"prefix": "ccppro",
 		"body": [
 			"#include<bits/stdc++.h>",
@@ -35,39 +35,50 @@
 			"",
 			"int main($2)",
 			"{",
-			"    ios_base::sync_with_stdio(false);"
-    	    "    cin.tie(NULL);"
-		    "    int no=1;",
-			"    cin>>no;",
-			"    for (int f = 0; f < no; f++)",
-			"    {",
-			"        $3",
-			"    }",
-			"    $4",
-			"    return 0;",
+			"\tios_base::sync_with_stdio(false);",
+			"\tcin.tie(NULL);",
+			"\tint no;",
+			"\tcin>>no;",
+			"\tfor (int f = 0; f < no; f++)",
+			"\t{",
+			"\t\t$3",
+			"\t}",
+			"\t$4",
+			"\treturn 0;",
 			"}"
 		],
 		"description": "Competetive c++ program"
-	}
-	  
-	  "include": {
+	},
+  
+	"include": {
 		"prefix": "inc",
 		"body": [
 			"#include <$1>"
 		],
 		"description": "include header file"
-	}
-
-	  "for loop": {
+	},
+  
+	"online judge": {
+		"prefix": "onj",
+		"body": [
+			"#ifndef ONLINE_JUDGE",
+			"\tfreopen(\"${1:input.txt}\",\"r\",stdin);",
+			"\tfreopen(\"${2:output.txt}\",\"w\",stdout);",
+			"#endif"
+		],
+		"description": "define input and output file as I/O"
+	},
+	
+  "for loop": {
 		"prefix": "forl",
 		"body": [
 			"for(int ${1:i}=${2:0} ; $1<${3:n} ; ++$1)",
 			"{",
-			"    $4",
-			"}"
+			"\t$4",
+			"}",
 		],
 		"description": "for loop"
-	}
+	},
 
 	"Count Frequency and save in map": {
 		"prefix": "frem",
@@ -86,72 +97,80 @@
 			 "}"
 		],
 		"description": "frequency count"
-	}
-
-	  "reverse for loop": {
+  },
+  
+  "reverse for loop": {
 		"prefix": "rforl",
 		"body": [
 			"for(int ${1:i}=${2:n} ; $1>${3:0} ; --$1)",
 			"{",
-			"    $4",
+			"\t$4",
 			"}"
 		],
 		"description": "reverse for loop"
-	}
-
-	  "input array": {
+	},
+  
+	"input array": {
 		"prefix": "inarr",
 		"body": [
-			"int arr[n];",
-			"for(int i=0 ; i<${1:n} ; ++i)",
-			"    cin>>${2:arr}[i];"
+			"int ${1:arr}[${2:n}];",
+			"for(int i=0 ; i<${2:n} ; ++i)",
+			"\tcin>>${1:arr}[i];"
 		],
 		"description": "input array"
-	}
-	  
-	  "Sort Line": {
+	},
+	
+  "Sort Line": {
 		"prefix": "so",
 		"body": [
 			"sort(arr,arr+n);"
 		],
 		"description": "line for sort"
-	}
+	},
 
-	  "Sort With Index Tracked": {
+	"vector Decleration": {
+		"prefix": "vi",
+		"body": [
+			"vector <int> v"
+		],
+		"description": "line for vector"
+	},
+  
+  "Sort With Index Tracked": {
 		"prefix": "soin",
 		"body": [
-			"sort(ind, ind + n, [&](int i, int j){ return arr[i] < arr[j]; });"
-			"sort(arr, arr + n);"
+		"sort(ind, ind + n, [&](int i, int j){ return arr[i] < arr[j]; });",
+		"sort(arr, arr + n);"
 		],
 		"description": "line for sorting with indexes in track"
-	}
-
-	  "Prefix sum array": {
+	},
+	
+  "Prefix sum array": {
 		"prefix": "pref",
 		"body": [
 			"int psa[n+1];",
 			"psa[0]=0;",
 			"for (int i = 0; i < n; i++)",
 			"{",
-			"	psa[i+1] = psa[i] + arr[i];",
-			"}",
+			"\tpsa[i+1] = psa[i] + arr[i];",
+			"}"
 		],
 		"description": "prefix sum of array"
-	}
-
-	  "Printf precise": {
+	},
+	
+  "Printf precise": {
 		"prefix": "pr",
 		"body": [
 			"cout<<$1${2:<<endl};"
 		],
 		"description": "print statement"
-	}
-
-	  "print array": {
+	},
+	
+  "print array": {
 		"prefix": "prarr",
 		"body": [
 			"for(int i=0 ; i<${1:n} ; ++i)",
-			"    cout<<${2:arr}[i]<<${3:endl};"
+			"\tcout<<${2:arr}[i]<<${3:endl};"
 		],
 		"description": "print array"
 	}
@@ -160,197 +179,195 @@
 		"prefix": "prvec",
 		"body": [
 			"for(int i=0 ; i<v.size() ; ++i)",
-			"    cout<<v[i]<<${3:endl};"
+			"    cout<<v[i]<<${1:endl};",
 		],
 		"description": "print array"
-	}
+	},
 
-	  "sort array": {
+	"sort array": {
 		"prefix": "compsrt",
 		"body": [
 			"for(int i=0;i<${1:n}-1;++i)",
 			"{",
 			"    sm = i;",
 			"    for(int j=i+1 ; j<$1 ; ++j)",
-			"        if(${2:arr}[sm]>$2[j])",
-			"          sm = j;",
+			"    \tif(${2:arr}[sm]>$2[j])",
+			"    \t\tsm = j;",
 			"    int temp = $2[sm];",
 			"    $2[sm]=$2[i];",
 			"    $2[i]=temp;",
 			"}"
 		],
 		"description": "sort array"
-	}
+	},
 
-	  "linear search": {
+	"linear search": {
 		"prefix": "lsearch",
 		"body": [
 			"for(int i=0;i<${1:n};++i)",
 			"{",
-			"    if(${2:arr}[i] == ind)",
-			"    {",
-			"        $3",
-			"    }",
+			"\tif(${2:arr}[i] == ind)",
+			"\t{",
+			"\t\t$3",
+			"\t}",
 			"}",
 			""
 		],
 		"description": "linear search"
-	}
+	},
 
-	  "binary search": {
+"binary search": {
 		"prefix": "bsearch",
 		"body": [
 			"int b=${1:0},e=${2:n}-1;",
 			"while(b<=e)",
 			"{",
-			"    int mid=(b+e)/2;",
-			"    if(${3:arr}[mid] == ${4:k})",
-			"    {",
-			"        $5",
-			"    }",
-			"    else if($3[mid] < $4)",
-			"    {",
-			"        $6",
-			"    }",
-			"    else",
-			"    {",
-			"        $7",
-			"    }",
-			"}",
-			"    ",
-			""
+			"\tint mid=(b+e)/2;",
+			"\tif(${3:arr}[mid] == ${4:k})",
+			"\t{",
+			"\t\t$5",
+			"\t}",
+			"\telse if($3[mid] < $4)",
+			"\t{",
+			"\t\t$6",
+			"\t}",
+			"\telse",
+			"\t{",
+			"\t\t$7",
+			"\t}",
+			"}"
 		],
 		"description": "binary search"
-	}
+	},
 
-	  "trenary operator": {
+"trenary operator": {
 		"prefix": "ter",
 		"body": [
 			"$1?$2:$3"
 		],
 		"description": "ternary operator"
-	}
+	},
 
-	  "while loop": {
+"while loop": {
 		"prefix": "whilel",
 		"body": [
 			"while(${1:n})",
 			"{",
-			"    $2",
-			"    --$1;",
+			"\t$2",
+			"\t--$1;",
 			"}"
 		],
 		"description": "while loop"
-	}
+	},
 
-	  "do - while loop": {
+"do - while loop": {
 		"prefix": "dowl",
 		"body": [
 			"do",
 			"{",
-			"    $1",
-			"    --$2;",
+			"\t$1",
+			"\t--$2;",
 			"}while(${2:n});"
 		],
 		"description": "do - while loop"
-	}
+	},
 
-	  "switch case": {
+"switch case": {
 		"prefix": "sw",
 		"body": [
 			"switch($1)",
 			"{",
-			"    case $2:$3",
-			"            break;",
-			"    $4",
-			"    default:$5",
+			"\tcase $2:$3",
+			"\t\t  break;",
+			"\t$4",
+			"\tdefault:$5",
 			"}"
 		],
 		"description": "switch case"
-	}
+	},
 
-	  "input": {
+"input": {
 		"prefix": "in",
 		"body": [
 			"${1:int} ${2:n};",
 			"cin>>$2;"
 		],
 		"description": "input"
-	}
+	},
 
-	  "function defination": {
+"function defination": {
 		"prefix": "fun",
 		"body": [
 			"${1:void} ${2:fun}($3)",
 			"{",
-			"    $4",
-			"    ${5:return ${6}};",
+			"\t$4",
+			"\t${5:return ${6}};",
 			"}"
 		],
 		"description": "function defination"
-	}
+	},
 
-	  "recursive function defination": {
+"recursive function defination": {
 		"prefix": "rfun",
 		"body": [
 			"${1:void} ${2:fun}($3)",
 			"{",
-			"    if($4)",
-			"      return $5;",
-			"    else",
-			"    {",
-			"        $6",
-			"        ${7:return ${8}$2($9)};",
-			"     }",
+			"\tif($4)",
+			"\t\treturn $5;",
+			"\telse",
+			"\t{",
+			"\t\t$6",
+			"\t\t${7:return ${8}$2($9)};",
+			"\t}",
 			"}"
 		],
 		"description": "recursive function defination"
-	}
+	},
 
-	  "structure defintation": {
+"structure defintation": {
 		"prefix": "stru",
 		"body": [
-			"struct($1)",
+			"struct $1",
 			"{",
-			"    $2",
+			"\t$2",
 			"}$3;"
 		],
 		"description": "structure defintation"
-	}
+	},
 
-	  "file defination": {
-		"prefix": "filed",
+"file defination": {
+		"prefix": "filopn",
 		"body": [
 			"File *${1:f};",
 			"$1 = fopen(\"$2\",\"${3:a+}\");",
 			"if($1 == NULL)",
 			"{",
-			"    puts(\"Unable to open file\");",
-			"    exit(1);",
+			"\tputs(\"Unable to open file\");",
+			"\texit(1);",
 			"}"
 		],
 		"description": "file defination"
-	}
+	},
 
-	  "malloc": {
+"malloc": {
 		"prefix": "mal",
 		"body": [
 			"${1:int} *${2:p};",
 			"$2 = ($1*)malloc(${3:n}*sizeof($1));"
 		],
 		"description": "malloc"
-	}
-		  
-	"Class Defination": {
+	},
+
+"Class Defination": {
 		"prefix": "cla",
 		"body": [
 			"class $1",
 			"{",
-		"	$2",
-		"	${3:private:}",
-		"		$4",
-		"	${5:public:}",
-		"		$6",
+			"\t$2",
+			"\t${3:private:}",
+			"\t$4",
+			"\t${5:public:}",
+			"\t$6",
 			"};"
 		],
 		"description": "Class Defination"
