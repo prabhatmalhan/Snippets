@@ -4,21 +4,32 @@
 		"body": [
 			"#include<bits/stdc++.h>",
 			"$1",
-			"using namespace std;",
-			"",
+			"#define ll long long",
+			"#define vi vector <int>",
+		  "using namespace std;",
+     	"\n",
 			"int main($2)",
 			"{",
 			"\t$3",
 			"\treturn 0;",
-			"}"
+			"}",
 		],
 		"description": "basic c++ program"
 	},
-	"competetive cpp program": {
+	"Printing a map": {
+		"prefix": "prma",
+		"body": [
+			"for(auto x: m)",
+    		"\tcout<<x.first<<$1<<x.second<<endl;"
+		],
+		"description": "printing a map"
+},
+  	"competetive cpp program": {
 		"prefix": "ccppro",
 		"body": [
 			"#include<bits/stdc++.h>",
 			"$1",
+			"#define vi vector <int>"
 			"#define ll long long",
 			"using namespace std;",
 			"",
@@ -30,7 +41,7 @@
 			"\tcin>>no;",
 			"\tfor (int f = 0; f < no; f++)",
 			"\t{",
-			"\t    $3",
+			"\t\t$3",
 			"\t}",
 			"\t$4",
 			"\treturn 0;",
@@ -38,6 +49,7 @@
 		],
 		"description": "Competetive c++ program"
 	},
+  
 	"include": {
 		"prefix": "inc",
 		"body": [
@@ -45,6 +57,7 @@
 		],
 		"description": "include header file"
 	},
+  
 	"online judge": {
 		"prefix": "onj",
 		"body": [
@@ -55,17 +68,38 @@
 		],
 		"description": "define input and output file as I/O"
 	},
-	"for loop": {
+	
+  "for loop": {
 		"prefix": "forl",
 		"body": [
 			"for(int ${1:i}=${2:0} ; $1<${3:n} ; ++$1)",
 			"{",
 			"\t$4",
-			"}"
+			"}",
 		],
 		"description": "for loop"
 	},
-	"reverse for loop": {
+
+	"Count Frequency and save in map": {
+		"prefix": "frem",
+		"body": [
+			"map<int, int> m;",
+			"for (int i = 0; i < n; i++)",
+			"{",
+			 "    if (m.find(arr[i]) == m.end())",
+			 "    {",
+			 "        m[arr[i]] = 1;",
+			 "    }",
+			 "    else",
+			 "    {",
+			 "        m[arr[i]]++;",
+			 "    }",
+			 "}"
+		],
+		"description": "frequency count"
+  },
+  
+  "reverse for loop": {
 		"prefix": "rforl",
 		"body": [
 			"for(int ${1:i}=${2:n} ; $1>${3:0} ; --$1)",
@@ -75,6 +109,7 @@
 		],
 		"description": "reverse for loop"
 	},
+  
 	"input array": {
 		"prefix": "inarr",
 		"body": [
@@ -84,13 +119,15 @@
 		],
 		"description": "input array"
 	},
-	"Sort Line": {
+	
+  "Sort Line": {
 		"prefix": "so",
 		"body": [
 			"sort(arr,arr+n);"
 		],
 		"description": "line for sort"
 	},
+
 	"vector Decleration": {
 		"prefix": "vi",
 		"body": [
@@ -98,15 +135,17 @@
 		],
 		"description": "line for vector"
 	},
-	"Sort With Index Tracked": {
+  
+  "Sort With Index Tracked": {
 		"prefix": "soin",
 		"body": [
-			"sort(ind, ind + n, [&](int i, int j){ return arr[i] < arr[j]; });",
-			"sort(arr, arr + n);"
+		"sort(ind, ind + n, [&](int i, int j){ return arr[i] < arr[j]; });",
+		"sort(arr, arr + n);"
 		],
 		"description": "line for sorting with indexes in track"
 	},
-	"Prefix sum array": {
+	
+  "Prefix sum array": {
 		"prefix": "pref",
 		"body": [
 			"int psa[n+1];",
@@ -118,21 +157,33 @@
 		],
 		"description": "prefix sum of array"
 	},
-	"Printf precise": {
+	
+  "Printf precise": {
 		"prefix": "pr",
 		"body": [
 			"cout<<$1${2:<<endl};"
 		],
 		"description": "print statement"
 	},
-	"print array": {
+	
+  "print array": {
 		"prefix": "prarr",
 		"body": [
 			"for(int i=0 ; i<${1:n} ; ++i)",
-			"\tcout<<${2:arr}[i]${3:<<endl};"
+			"\tcout<<${2:arr}[i]<<${3:endl};"
+		],
+		"description": "print array"
+	}
+
+	"print vector": {
+		"prefix": "prvec",
+		"body": [
+			"for(int i=0 ; i<v.size() ; ++i)",
+			"    cout<<v[i]<<${1:endl};",
 		],
 		"description": "print array"
 	},
+
 	"sort array": {
 		"prefix": "compsrt",
 		"body": [
@@ -149,6 +200,7 @@
 		],
 		"description": "sort array"
 	},
+
 	"linear search": {
 		"prefix": "lsearch",
 		"body": [
@@ -163,7 +215,8 @@
 		],
 		"description": "linear search"
 	},
-	"binary search": {
+
+"binary search": {
 		"prefix": "bsearch",
 		"body": [
 			"int b=${1:0},e=${2:n}-1;",
@@ -186,14 +239,16 @@
 		],
 		"description": "binary search"
 	},
-	"trenary operator": {
+
+"trenary operator": {
 		"prefix": "ter",
 		"body": [
 			"$1?$2:$3"
 		],
 		"description": "ternary operator"
 	},
-	"while loop": {
+
+"while loop": {
 		"prefix": "whilel",
 		"body": [
 			"while(${1:n})",
@@ -204,7 +259,8 @@
 		],
 		"description": "while loop"
 	},
-	"do - while loop": {
+
+"do - while loop": {
 		"prefix": "dowl",
 		"body": [
 			"do",
@@ -215,7 +271,8 @@
 		],
 		"description": "do - while loop"
 	},
-	"switch case": {
+
+"switch case": {
 		"prefix": "sw",
 		"body": [
 			"switch($1)",
@@ -228,7 +285,8 @@
 		],
 		"description": "switch case"
 	},
-	"input": {
+
+"input": {
 		"prefix": "in",
 		"body": [
 			"${1:int} ${2:n};",
@@ -236,7 +294,8 @@
 		],
 		"description": "input"
 	},
-	"function defination": {
+
+"function defination": {
 		"prefix": "fun",
 		"body": [
 			"${1:void} ${2:fun}($3)",
@@ -247,7 +306,8 @@
 		],
 		"description": "function defination"
 	},
-	"recursive function defination": {
+
+"recursive function defination": {
 		"prefix": "rfun",
 		"body": [
 			"${1:void} ${2:fun}($3)",
@@ -263,7 +323,8 @@
 		],
 		"description": "recursive function defination"
 	},
-	"structure defintation": {
+
+"structure defintation": {
 		"prefix": "stru",
 		"body": [
 			"struct $1",
@@ -273,7 +334,8 @@
 		],
 		"description": "structure defintation"
 	},
-	"file defination": {
+
+"file defination": {
 		"prefix": "filopn",
 		"body": [
 			"File *${1:f};",
@@ -286,7 +348,8 @@
 		],
 		"description": "file defination"
 	},
-	"malloc": {
+
+"malloc": {
 		"prefix": "mal",
 		"body": [
 			"${1:int} *${2:p};",
@@ -294,7 +357,8 @@
 		],
 		"description": "malloc"
 	},
-	"Class Defination": {
+
+"Class Defination": {
 		"prefix": "cla",
 		"body": [
 			"class $1",
