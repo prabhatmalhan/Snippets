@@ -12,7 +12,7 @@
 			"{",
 			"\t$3",
 			"\treturn 0;",
-			"}",
+			"}"
 		],
 		"description": "basic c++ program"
 	},
@@ -74,7 +74,7 @@
 			"for(int ${1:i}=${2:0} ; $1<${3:n} ; ++$1)",
 			"{",
 			"\t$4",
-			"}",
+			"}"
 		],
 		"description": "for loop"
 	},
@@ -177,7 +177,7 @@
 		"prefix": "prvec",
 		"body": [
 			"for(int i=0 ; i<v.size() ; ++i)",
-			"    cout<<v[i]<<${1:endl};",
+			"    cout<<v[i]<<${1:endl};"
 		],
 		"description": "print array"
 	},
@@ -338,7 +338,7 @@
 		"prefix": "mal",
 		"body": [
 			"${1:int} *${2:p};",
-			"$2 = ($1*)malloc(${3:n}*sizeof($1));",
+			"$2 = ($1*)malloc(${3:n}*sizeof($1));"
 		],
 		"description": "malloc"
 	},
@@ -366,9 +366,9 @@
 			"\tif(n == 1) return n;",
 			"\tif(dp.find(n) != dp.end()) return dp[n];",
 			"\treturn dp[n] = n*fact(n-1);",
-			"}",
+			"}"
 		],
-		"description": "Factorial Function",
+		"description": "Factorial Function"
 	},
 	"Longest Common Substring": {
 		"prefix": "lcs",
@@ -393,9 +393,9 @@
 			"\t\t\tdp[i][j]=0;",
 			"\t\t}",
 			"\t}",
-			"}",
+			"}"
 		],
-		"description": "Longest Common Substring",
+		"description": "Longest Common Substring"
 	},
 	"Sum of Digits of a Number": {
 		"prefix": "sodg",
@@ -409,9 +409,9 @@
 			"\t\tn = n / 10;",
 			"\t}",
 			"\treturn sum;",
-			"}",
+			"}"
 		],
-		"description": "Sum of Digits of a Number Function",
+		"description": "Sum of Digits of a Number Function"
 	},
 	"Fibonacci Series": {
 		"prefix": "fibo",
@@ -431,10 +431,26 @@
 			"\telse",
 			"\t\ts = fibonacci(n-2);",
 			"\treturn dp[n] = (f+s);",
-			"}",
+			"}"
 		],
-		"description": "Fibonacci Series uding DP",
+		"description": "Fibonacci Series uding DP"
 	},
+
+	"Stopwatch": {
+		"prefix": "sto",
+		"body": [
+			"double tick()",
+			"{",
+			"\tstatic clock_t start_time;",
+			"\tclock_t end_time = clock();",
+			"\tdouble diff = 1.0 * (end_time - start_time) / CLOCKS_PER_SEC;", 
+			"\tstart_time = end_ticks;",
+			"\treturn diff;",
+			"}"
+		], 
+		"description": "function to return time lapsed wherever called"
+  },
+  
 	"Power Function": {
 		"prefix": "mpow",
 		"body": [
