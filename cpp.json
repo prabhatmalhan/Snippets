@@ -29,6 +29,8 @@
 		"body": [
 			"#include<bits/stdc++.h>",
 			"$1",
+			"#define mod 1000000007",
+			"#define INF 2147483637",
 			"#define vi vector <int>",
 			"#define ll long long",
 			"using namespace std;",
@@ -445,7 +447,34 @@
 			"\tstart_time = end_ticks;",
 			"\treturn diff;",
 			"}"
-		],
+		], 
 		"description": "function to return time lapsed wherever called"
+  },
+  
+	"Power Function": {
+		"prefix": "mpow",
+		"body": [
+			"ll newpow(int b, int e, int modu = 1)",
+			"{",
+			"\tll result = 1, base = b, exp = e;",
+			"\tif (modu)",
+			"\t\tbase %= mod;",
+			"\twhile (exp > 0)",
+			"\t{",
+			"\t\tif (exp & 1)",
+			"\t\t{",
+			"\t\t\tresult = ((ll)result * base);",
+			"\t\t\tif (modu)",
+			"\t\t\t\tresult %= mod;",
+			"\t\t}",
+			"\t\tbase = ((ll)base * base);",
+			"\t\tif (modu)",
+			"\t\t\tbase %= mod;",
+			"\t\texp >>= 1;",
+			"\t}",
+			"\treturn result;",
+			"}",
+		],
+		"description": "Power of a number",
 	}
 }
