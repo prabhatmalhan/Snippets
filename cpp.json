@@ -189,7 +189,7 @@
 			"for(int i=0 ; i<${1:n} ; ++i)",
 			"{",
 			"\tfor(int j=0 ; j<${2:n} ; ++j)",
-			"\t\tcout<<${3:arr}[i][j]${4:<<endl};",
+			"\t\tcout<<${3:arr}[i][j]${4:<< \" \"};",
 			"\tcout << endl;",
 			"}"
 		],
