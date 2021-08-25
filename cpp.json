@@ -115,6 +115,16 @@
 		],
 		"description": "input array"
 	},
+	"input 2-D array": {
+		"prefix": "inarr2",
+		"body": [
+			"int ${1:arr}[${2:m}][${3:n}];",
+			"for(int i=0 ; i<${2:m} ; ++i)",
+			"\tfor(int j=0 ; j<${3:n} ; ++j)",
+			"\t\tcin>>${1:arr}[i][j];"
+		],
+		"description": "input 2-d array"
+	},
 	"input vector": {
 		"prefix": "invec",
 		"body": [
@@ -172,6 +182,15 @@
 			"\tcout<<${2:arr}[i]<<${3:endl};"
 		],
 		"description": "print array"
+	},
+	"print 2-D array": {
+		"prefix": "prarr2",
+		"body": [
+			"for(int i=0 ; i<${1:n} ; ++i)",
+			"\tfor(int j=0 ; j<${2:n} ; ++j)",
+			"\t\tcout<<${3:arr}[i][j]${4:<<endl};"
+		],
+		"description": "print 2-d array"
 	},
 	"print vector": {
 		"prefix": "prvec",
