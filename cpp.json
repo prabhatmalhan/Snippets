@@ -105,8 +105,8 @@
 		"prefix": "onj",
 		"body": [
 			"\n#ifndef ONLINE_JUDGE",
-    		"\tfreopen(\"in.txt\", \"r\", stdin);",
-    		"\tfreopen(\"out.txt\", \"w\", stdout);",
+    			"\tfreopen(\"input.txt\", \"r\", stdin);",
+    			"\tfreopen(\"output.txt\", \"w\", stdout);",
 			"#endif\n",
 		],
 		"description": "define input and output file as I/O"
