@@ -126,9 +126,9 @@
 		"prefix": "onj",
 		"body": [
 			"\n#ifndef ONLINE_JUDGE",
-    		"\tfreopen(\"in.txt\", \"r\", stdin);",
-    		"\tfreopen(\"out.txt\", \"w\", stdout);",
-			"#endif\n",
+			"\tfreopen(\"in.txt\", \"r\", stdin);",
+			"\tfreopen(\"out.txt\", \"w\", stdout);",
+			"#endif\n"
 		],
 		"description": "define input and output file as I/O"
 	},
@@ -454,7 +454,7 @@
 			"\t\t\t}",
 			"\t\t}",
 			"\treturn dp[n][m];",
-			"}",
+			"}"
 		],
 		"description": "Longest Common Substring"
 	},
@@ -532,16 +532,16 @@
 			"\t\texp >>= 1;",
 			"\t}",
 			"\treturn result;",
-			"}",
+			"}"
 		],
-		"description": "Power of a number",
+		"description": "Power of a number"
 	},
 	"Sort in Reverse": {
 		"prefix": "revso",
 		"body": [
-			"sort(arr, arr + n, greater<int>());",
+			"sort(arr, arr + n, greater<int>());"
 		],
-		"description": "Sort an array in reverse order",
+		"description": "Sort an array in reverse order"
 	},
 	"Breadth First Search": {
 		"prefix": "bfs",
@@ -567,9 +567,9 @@
 			"\t\t\t}",
 			"\t\t}",
 			"\t}",
-			"}",
+			"}"
 		],
-		"description": "Find path Using Breadth First Search",
+		"description": "Find path Using Breadth First Search"
 	},
 	"Depth First Search": {
 		"prefix": "dfs",
@@ -588,16 +588,16 @@
 			"\t\t\tdfs(adj, x, n);",
 			"\t\t}",
 			"\t}",
-			"}",
+			"}"
 		],
-		"description": "Find path Using Depth First Search",
+		"description": "Find path Using Depth First Search"
 	},
 	"Minimum priority queue": {
 		"prefix": "minpq",
 		"body": [
-			"priority_queue<int, vi, greater<int>> ${1:mpq};",
+			"priority_queue<int, vi, greater<int>> ${1:mpq};"
 		],
-		"description": "Priority queue in ascending order",
+		"description": "Priority queue in ascending order"
 	},
 	"Extra Design": {
 		"prefix": "cr7",
@@ -621,6 +621,6 @@
 			"// ░░░░████████░░███░░░░███░███░░░░░░░░░░░░░████████░░███░░░░███░███░░░░░░░░░░░░░████████░░███░░░░███░███░░░░░░░░░",
 			"// ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░"
 		],
-		"description": "Extra Design",
+		"description": "Extra Design"
 	}
 }

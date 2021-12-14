@@ -8,14 +8,14 @@
 			"{",
 			"    $3",
 			"    return 0;",
-			"}",
+			"}"
 		],
 		"description": "basic c program"
 	},
 	"include": {
 		"prefix": "inc",
 		"body": [
-			"#include <$1.h>",
+			"#include <$1.h>"
 		],
 		"description": "include header file"
 	},
@@ -25,7 +25,7 @@
 			"for(int ${1:i}=${2:0} ; $1<${3:n} ; ++$1)",
 			"{",
 			"    $4",
-			"}",
+			"}"
 		],
 		"description": "for loop"
 	},
@@ -35,7 +35,7 @@
 			"for(int ${1:i}=${2:n} ; $1>${3:0} ; --$1)",
 			"{",
 			"    $4",
-			"}",
+			"}"
 		],
 		"description": "reverse for loop"
 	},
@@ -43,14 +43,14 @@
 		"prefix": "inarr",
 		"body": [
 			"for(int i=0 ; i<${1:n} ; ++i)",
-			"    scanf(\"%d\",&${2:arr}[i]);",
+			"    scanf(\"%d\",&${2:arr}[i]);"
 		],
 		"description": "input array"
 	},
 	"Printf precise": {
 		"prefix": "pr",
 		"body": [
-			"printf(\"${1}\"$2);",
+			"printf(\"${1}\"$2);"
 		],
 		"description": "print statement"
 	},
@@ -58,7 +58,7 @@
 		"prefix": "prarr",
 		"body": [
 			"for(i=0 ; i<${1:n} ; ++i)",
-			"    printf(\"%d\",${2:arr}[i]);",
+			"    printf(\"%d\",${2:arr}[i]);"
 		],
 		"description": "print array"
 	},
@@ -74,7 +74,7 @@
 			"    int temp = $2[sm];",
 			"    $2[sm]=$2[i];",
 			"    $2[i]=temp;",
-			"}",
+			"}"
 		],
 		"description": "sort array"
 	},
@@ -87,7 +87,7 @@
 			"    {",
 			"        $3",
 			"    }",
-			"}",
+			"}"
 		],
 		"description": "linear search"
 	},
@@ -111,14 +111,14 @@
 			"        $7",
 			"    }",
 			"}",
-			"    ",
+			"    "
 		],
 		"description": "binary search"
 	},
 	"trenary operator": {
 		"prefix": "ter",
 		"body": [
-			"$1?$2:$3",
+			"$1?$2:$3"
 		],
 		"description": "ternary operator"
 	},
@@ -129,7 +129,7 @@
 			"{",
 			"    $2",
 			"    --$1;",
-			"}",
+			"}"
 		],
 		"description": "while loop"
 	},
@@ -140,7 +140,7 @@
 			"{",
 			"    $1",
 			"    --$2;",
-			"}while(${2:n});",
+			"}while(${2:n});"
 		],
 		"description": "do - while loop"
 	},
