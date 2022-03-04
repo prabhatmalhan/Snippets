@@ -254,6 +254,16 @@
 		],
 		"description": "input array"
 	},
+	"input 2-D array": {
+		"prefix": "inarr2",
+		"body": [
+			"int ${1:arr}[${2:m}][${3:n}];",
+			"for(int i=0 ; i<${2:m} ; ++i)",
+			"\tfor(int j=0 ; j<${3:n} ; ++j)",
+			"\t\tcin>>${1:arr}[i][j];"
+		],
+		"description": "input 2-d array"
+	},
 	"input vector": {
 		"prefix": "invec",
 		"body": [
